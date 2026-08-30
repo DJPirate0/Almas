@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "ui-sans-serif", "system-ui", "sans-serif";
+  --font-serif: "Playfair Display", "ui-serif", "Georgia", "serif";
+  --font-brand: "Cinzel", "Syne", "Playfair Display", serif;
+  --font-display: "Syne", "Inter", sans-serif;
+
+  --color-bg-app: var(--bg-app);
+  --color-text-app: var(--text-app);
+  --color-border-app: var(--border-app);
+  --color-border-app-hover: var(--border-app-hover);
+  --color-card-bg: var(--card-bg);
+  --color-card-bg-solid: var(--card-bg-solid);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-text: var(--btn-text);
+  --color-accent-glow: var(--accent-glow);
+}
+
+:root {
+  /* Default: Dark mode values */
+  --bg-app: #070708;
+  --text-app: #ffffff;
+  --border-app: #18181b; /* zinc-900 */
+  --border-app-hover: #27272a; /* zinc-800 */
+  --card-bg: rgba(7, 7, 8, 0.45);
+  --card-bg-solid: #0d0d0f;
+  --text-muted: #a1a1aa; /* zinc-400 */
+  --text-dim: #71717a; /* zinc-500 */
+  --btn-bg: #1a1a1d;
+  --btn-text: #ffffff;
+  --accent-glow: rgba(255, 255, 255, 0.02);
+  --scroll-track: #070708;
+  --scroll-thumb: #1a1a1d;
+  --scroll-thumb-hover: #333333;
+}
+
+html[data-theme="light"] {
+  /* Light mode values */
+  --bg-app: #fbfbfb;
+  --text-app: #09090b;
+  --border-app: #e4e4e7; /* zinc-200 */
+  --border-app-hover: #cbd5e1; /* slate-300 */
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-bg-solid: #ffffff;
+  --text-muted: #3f3f46; /* zinc-700 */
+  --text-dim: #71717a; /* zinc-500 */
+  --btn-bg: #f4f4f5;
+  --btn-text: #09090b;
+  --accent-glow: rgba(0, 0, 0, 0.015);
+  --scroll-track: #f4f4f5;
+  --scroll-thumb: #e4e4e7;
+  --scroll-thumb-hover: #d4d4d8;
+}
+
+/* Custom scrollbar matching dark, minimalist theme */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}
+
+/* Base style smooth scroll */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-app);
+  color: var(--text-app);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-app);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

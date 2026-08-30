@@ -1,0 +1,6 @@
+{
+  "name": "Almas Creative Studio",
+  "description": "A luxury creative studio collective platform featuring a bespoke service showcase and an interactive quote estimator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
